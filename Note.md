@@ -54,3 +54,26 @@ setup() {
   return { sum }
 }
 ```
+
+### LifeCycle Hooks
+
+#### beforeCreate
+optional API와 다르게 composition API의 setup 함수 그 자체가 beforeCreate를 대체한다.
+
+#### create
+beforeCreate와 마찬가지로 setup 함수가 대체한다. 하지만 컴포넌트의 옵션에 접근이 가능하기 깨문에 data 옵션에 선언한 데이터들을 초기화할 때 많이 사용된다.
+
+#### beforeMount(onBeforeMount)
+Vue의 가상 노드가 render 함수를 호출하기 직전에 호출된다. onRenderTracked 생명주기 훅을 통해 관찰할 수 있다.
+
+#### unmounted(onUnmounted)
+
+#### activated(onActivated)
+
+#### deactivated(onDeactivated)
+
+#### renderTracked(onRenderTracked)
+
+#### renderTriggered(onRenderTriggered)
+
+#### errorCaptured(onErrorCaptured)
